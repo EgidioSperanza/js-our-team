@@ -33,8 +33,6 @@ const team = [
   
   const teamContainer = document.querySelector(".team-container");
   const addBtn = document.getElementById("addMemberButton");
-  const newMemberName = document.getElementById("name").value;
-  const newMemberRole = document.getElementById("role").value;
   let countNewMember = 1;
 
   function createCard(){
@@ -65,6 +63,9 @@ const team = [
   createCard();
 
   addBtn.addEventListener("click", function(){
+    let newMemberName = document.getElementById("name").value;
+    let newMemberRole = document.getElementById("role").value;
+ 
     countNewMember<4 ? countNewMember++ : countNewMember=1;
 
     let newTeamMember={
